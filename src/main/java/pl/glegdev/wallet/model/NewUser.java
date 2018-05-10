@@ -5,8 +5,6 @@ public class NewUser extends User {
         setUsername(username);
         setPassword(password);
         setEmail(email);
-        setFirstName(firstName);
-        setLastName(lastName);
     }
 
     public User toUser() {
@@ -14,8 +12,6 @@ public class NewUser extends User {
         user.setUsername(getUsername());
         user.setPassword(getPassword());
         user.setEmail(getEmail());
-        user.setFirstName(getFirstName());
-        user.setLastName(getLastName());
         return user;
     }
 }
