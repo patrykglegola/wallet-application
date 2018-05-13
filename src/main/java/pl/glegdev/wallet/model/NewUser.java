@@ -1,7 +1,7 @@
 package pl.glegdev.wallet.model;
 
 public class NewUser extends User {
-    public NewUser(String username, String password, String email, String firstName, String lastName) {
+    public NewUser(String username, String password, String email) {
         setUsername(username);
         setPassword(password);
         setEmail(email);

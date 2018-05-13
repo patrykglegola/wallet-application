@@ -30,17 +30,13 @@ public class DatabaseSeeder implements CommandLineRunner {
         users.add(new NewUser(
                 "adam",
                 "adam123",
-                "adam@gmail.com",
-                "Adam",
-                "Adamowski"
+                "adam@gmail.com"
         ).toUser());
 
         users.add(new NewUser(
                 "piotrek",
                 "piotr321",
-                "piotrek@yahoo.com",
-                "Piotr",
-                "Piotrowski"
+                "piotrek@yahoo.com"
         ).toUser());
 
         userService.save(users);
