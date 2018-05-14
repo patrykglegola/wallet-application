@@ -1,8 +1,6 @@
 package pl.glegdev.wallet.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -11,6 +9,7 @@ import javax.validation.constraints.NotEmpty;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
 @Entity
 @Table(name = "users")
 public class User {
@@ -31,4 +30,9 @@ public class User {
     @NotEmpty
     private String email;
 
+    public User(@NotEmpty String username, @NotEmpty String password, @Email @NotEmpty String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
 }

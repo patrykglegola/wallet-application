@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import pl.glegdev.wallet.model.NewUser;
 import pl.glegdev.wallet.model.User;
 
 import java.util.ArrayList;
@@ -27,19 +26,19 @@ public class DatabaseSeeder implements CommandLineRunner {
     public void run(String... strings) throws Exception {
         List<User> users = new ArrayList<>();
 
-        users.add(new NewUser(
+        users.add(new User(
                 "adam",
                 "adam123",
                 "adam@gmail.com"
-        ).toUser());
+        ));
 
-        users.add(new NewUser(
+        users.add(new User(
                 "piotrek",
                 "piotr321",
                 "piotrek@yahoo.com"
-        ).toUser());
+        ));
 
-        userService.save(users);
+        userService.create(users);
         System.out.println("Lista userów z bazy: \n" + userService.getAll().toString());
     }
 
