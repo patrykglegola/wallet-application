@@ -4,14 +4,13 @@ import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.io.Serializable;
 import java.util.Collection;
 
 
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class LoggedUser implements UserDetails, Serializable{
+public class LoggedUser implements UserDetails {
 
     @NonNull
     private String username;
