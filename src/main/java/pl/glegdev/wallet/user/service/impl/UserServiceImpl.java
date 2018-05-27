@@ -1,11 +1,12 @@
-package pl.glegdev.wallet.service.impl;
+package pl.glegdev.wallet.user.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import pl.glegdev.wallet.model.User;
-import pl.glegdev.wallet.persistence.UserRepository;
-import pl.glegdev.wallet.service.UserService;
+import pl.glegdev.wallet.user.model.User;
+import pl.glegdev.wallet.user.model.UserRole;
+import pl.glegdev.wallet.user.persistence.UserRepository;
+import pl.glegdev.wallet.user.service.UserService;
 
 import javax.persistence.EntityExistsException;
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ public class UserServiceImpl implements UserService {
     public User create(User user) {
         checkNotExist(user);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setRole(UserRole.USER);
         return userRepository.save(user);
     }
 

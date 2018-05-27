@@ -1,11 +1,11 @@
-package pl.glegdev.wallet.service;
+package pl.glegdev.wallet.user.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import pl.glegdev.wallet.model.User;
+import pl.glegdev.wallet.user.model.User;
 
 import java.util.ArrayList;
 import java.util.List;
