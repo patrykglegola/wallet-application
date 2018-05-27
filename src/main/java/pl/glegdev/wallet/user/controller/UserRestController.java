@@ -1,10 +1,10 @@
-package pl.glegdev.wallet.controller;
+package pl.glegdev.wallet.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import pl.glegdev.wallet.model.User;
-import pl.glegdev.wallet.service.UserService;
+import pl.glegdev.wallet.user.model.User;
+import pl.glegdev.wallet.user.service.UserService;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -31,6 +31,11 @@ public class UserRestController {
     @RequestMapping(path = "/all", method = RequestMethod.GET)
     public List<User> getAll() {
         return userService.getAll();
+    }
+
+    @RequestMapping(path = "/{id}", method = RequestMethod.GET)
+    public User getById(@PathVariable long id) {
+        return userService.get(id);
     }
 
 }

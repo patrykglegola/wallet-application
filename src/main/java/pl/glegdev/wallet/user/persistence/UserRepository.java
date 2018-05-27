@@ -1,8 +1,8 @@
-package pl.glegdev.wallet.persistence;
+package pl.glegdev.wallet.user.persistence;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import pl.glegdev.wallet.model.User;
+import pl.glegdev.wallet.user.model.User;
 
 /**
  *  Spring generates implementation automatically.

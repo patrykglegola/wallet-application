@@ -1,6 +1,6 @@
-package pl.glegdev.wallet.service;
+package pl.glegdev.wallet.user.service;
 
-import pl.glegdev.wallet.model.User;
+import pl.glegdev.wallet.user.model.User;
 
 import java.util.List;
 
